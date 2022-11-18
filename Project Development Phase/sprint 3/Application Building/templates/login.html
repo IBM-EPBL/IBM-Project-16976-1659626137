@@ -1,0 +1,29 @@
+{% extends 'base.html' %} {% block head %} {% endblock %}
+
+<!-- body -->
+{% block body %}
+<form action="/" method="POST">
+  <div class="container">
+    <h1>Login</h1>
+    <p>Please enter credentials to login to your account.</p>
+    <hr />
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required />
+    <br />
+    <label for="psw"><b>Password</b></label>
+    <input
+      type="password"
+      placeholder="Enter Password"
+      name="password"
+      required
+    />
+
+    <div class="buttoncont">
+      <button type="submit" class="signupbtn">
+        <a class="redirectlink" href="signup">Sign Up</a>
+      </button>
+      <button type="submit" class="loginbtn">Login</button>
+    </div>
+  </div>
+</form>
+{% endblock %}

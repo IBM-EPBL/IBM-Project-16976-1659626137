@@ -1,0 +1,22 @@
+{% extends 'base.html' %} {% block head %} {% endblock %}
+ 
+ {% block body %}
+  <nav class="header" >
+  <h1 class="appname">
+    Real-Time Communication System Powered by AI for the Specially Abled
+  </h1>
+  </nav>
+  <div class="cont">
+  <p class="imgcont"><img id="output" src="../static/images/sign.jpg"/></p><br>
+  <div class="convertbtn">
+    <a class="red_btn" href="/signtospeech"><button id ="text"  style="width: 200px;" >Add Letter</button></a>
+    <a class="red_btn" href="/signtospeech"><button id ="text" type="button" onclick="refreshWord()" style="width: 200px;" >New Word</button></a>
+  </div>
+  <div class="output"><strong>Converted result : {{pred}}</strong>
+     <span onclick="audio()"><i class="fa fa-volume-up fa-2x" style="margin-left: 8px; margin-top: -4px; color: grey;"></i></span>
+  </div>
+  </div>
+  
+  {% endblock %}
+</html>
+ 
